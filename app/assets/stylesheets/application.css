@@ -53,6 +53,10 @@
     color: whitesmoke;
     font-weight: 500;
   }
+
+  .btn:hover {
+    background-color: #FF5733;
+  }
  /* splash style end  */
 .switch {
   position: relative;
