@@ -9,9 +9,9 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(foods_params)
-    if @food.save 
+    if @food.save
       redirect_to foods_path, notice: 'Ingredient was successfully created'
-    else 
+    else
       redirect_to new_food_path, notice: 'Cannot create a new ingredient'
     end
   end
@@ -23,7 +23,7 @@ class FoodsController < ApplicationController
     redirect_to foods_path, notice: 'Post successfully deleted'
   end
 
-  private 
+  private
 
   def foods_params
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity).merge(user_id: current_user.id)
