@@ -5,6 +5,55 @@
 /* Food */
 
 /* Recipes  */
+:root {
+  --primary-color: #FF8400;
+  --white-color: #FFFAEB;
+  --text-color: #130E01;
+  --light-white-color: #FFF5D6;
+  --bold-orange-color: #CF4307;
+}
+ /* splash style  */
+  .splash-section {
+    background-color:var(--white-color);
+  }
+
+  .header-container {
+    position: relative;
+    z-index: 1;
+    transform: translateY(10%);
+  }
+
+  .logo-icon {
+    /* background-color: var(--bold-orange-color); */
+    color: var(--bold-orange-color);
+  }
+
+  .header-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+
+  }
+
+  .login-register-container {
+    width: 80%;
+    background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-color: #eae8e6;
+    background-blend-mode: multiply;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 16px;
+    transform: translateY(-30%);
+  }
+
+  .btn {
+    background-color: var(--bold-orange-color);
+    color: whitesmoke;
+    font-weight: 500;
+  }
+ /* splash style end  */
 .switch {
   position: relative;
   display: inline-block;
