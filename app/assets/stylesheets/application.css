@@ -31,7 +31,7 @@
   transition: background-color 0.4s;
 }
 
-.switch label:after {
+.switch label::after {
   content: '';
   position: absolute;
   width: 26px;
@@ -47,7 +47,7 @@
   background-color: #3cb371; /* Change background color when switched on */
 }
 
-.switch input:checked + label:after {
+.switch input:checked + label::after {
   transform: translateX(26px); /* Move the thumb to the right when switched on */
 }
 
