@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Recipes index', type: :feature do
+RSpec.describe 'Recipes new', type: :feature do
   before :each do
     login_user
   end
