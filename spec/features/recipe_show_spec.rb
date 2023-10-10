@@ -22,15 +22,15 @@ RSpec.describe 'Recipes show', type: :feature do
 
   it 'see the add ingredient link' do
     visit recipe_path(@recipe.id)
-    expect(page).to have_content("Add ingredient")
+    expect(page).to have_content('Add ingredient')
   end
 
   it 'see the generate shopping link' do
     visit recipe_path(@recipe.id)
-    expect(page).to have_content("Generate shopping List")
+    expect(page).to have_content('Generate shopping List')
   end
 
-  it 'see the user name 'do 
+  it 'see the user name ' do
     visit recipe_path(@recipe.id)
     expect(page).to have_content(@user.name)
   end

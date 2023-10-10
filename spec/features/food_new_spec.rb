@@ -14,5 +14,4 @@ RSpec.describe 'Food new' do
   it 'see the add new ingredient link' do
     expect(page).to have_button('Add new Ingredient')
   end
-
 end

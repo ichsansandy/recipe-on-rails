@@ -23,5 +23,4 @@ RSpec.describe 'Foods index' do
     click_on 'Add Ingredient'
     expect(page).to have_content('Add New Ingredient')
   end
-
 end

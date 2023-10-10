@@ -12,5 +12,4 @@ RSpec.describe 'Public Recipes Index' do
   it 'see the navbar' do
     expect(page).to have_content('Public Recipes')
   end
-
 end

@@ -11,12 +11,12 @@ RSpec.describe 'Recipes new', type: :feature do
   end
 
   it 'sees the navbar' do
-    visit new_recipe_path 
+    visit new_recipe_path
     expect(page).to have_content('My Ingredients')
   end
 
   it 'sees the add new recipe link' do
-    visit new_recipe_path 
+    visit new_recipe_path
     expect(page).to have_button('Add new recipe')
   end
 
