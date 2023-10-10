@@ -5,6 +5,7 @@
 /* Food */
 
 /* Recipes  */
+
 /* The switch - the box around the slider */
 .switch {
   font-size: 17px;
@@ -31,7 +32,7 @@
   bottom: 0;
   background-color: #fff;
   border: 1px solid #adb5bd;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
@@ -44,7 +45,7 @@
   left: 0.27em;
   bottom: 0.25em;
   background-color: #adb5bd;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {

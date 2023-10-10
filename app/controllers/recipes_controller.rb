@@ -16,8 +16,7 @@ class RecipesController < ApplicationController
   def toggle_public
     @recipe = Recipe.find(params[:id])
     @recipe.update(public: !@recipe.public)
-
-    redirect_to @recipe, notice: "Recipe updated successfully"
+    render json: { public: @recipe.public }
   end
 
   def new

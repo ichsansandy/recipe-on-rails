@@ -3,21 +3,21 @@
   <div class="flex justify-center py-3">
   <%= form_with model: @recipe, url: recipes_path ,class: "grid gap-1" do |form| %>
       <%= form.label :name, "Recipe name :" %>
-      <%= form.text_field :name, class: "border border-slate-200" %>
+      <%= form.text_field :name, class: "border border-slate-200", required: true %>
       <%= form.label :description, "Recipe description :" %>
-      <%= form.text_field :description, class: "border border-slate-200" %>
+      <%= form.text_field :description, class: "border border-slate-200", required: true %>
       <%= form.label :preparation_time, "Preparation time :" %>
       <div class="flex gap-2">
-        <%= form.number_field :preparation_time_hr, value: 0 , class: "border border-slate-200 w-1/5 text-center"%>
+        <%= form.number_field :preparation_time_hr, placeholder: 0 , class: "border border-slate-200 w-1/5 text-center", required: true%>
         <%= form.label :preparation_time_hr, "hr",class: "w-1/12" %>
-        <%= form.number_field :preparation_time_min, value: 0 , in: 0..60, class: "border border-slate-200 w-1/5 text-center"%>
+        <%= form.number_field :preparation_time_min, placeholder: 0 , in: 0..60, class: "border border-slate-200 w-1/5 text-center", required: true%>
         <%= form.label :preparation_time_min, "min",class: "w-1/12" %>      
       </div>
       <%= form.label :cooking_time, "Cooking time :" %>
       <div class="flex gap-2">
-        <%= form.number_field :cooking_time_hr, value: 0, class: "border border-slate-200 w-1/5 text-center"%>
+        <%= form.number_field :cooking_time_hr, placeholder: 0, class: "border border-slate-200 w-1/5 text-center", required: true%>
         <%= form.label :cooking_time_hr, "hr",class: "w-1/12" %>
-        <%= form.number_field :cooking_time_min, value: 0, in: 0..60, class: "border border-slate-200 w-1/5 text-center"%>
+        <%= form.number_field :cooking_time_min, placeholder: 0, in: 0..60, class: "border border-slate-200 w-1/5 text-center", required: true%>
         <%= form.label :cooking_time_min, "min",class: "w-1/12" %>      
       </div>
       
