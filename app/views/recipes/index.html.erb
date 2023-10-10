@@ -1,3 +1,7 @@
 <%= render "shared/navbar" %>
-<h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<h1 class="bg-primary text-2xl text-center font-extrabold">My Recipe</h1>
+<div class="flex flex-wrap gap-2 justify-center bg-primary p-6">
+  <% @recipes.includes(:user).each do |r| %>
+      <%= render "shared/recipe_card", recipe: r %>
+  <% end %>
+</div>
