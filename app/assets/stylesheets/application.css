@@ -146,5 +146,5 @@ input:checked + .slider::before {
 
 /* Utility  */
 .bg-primary {
-  background-color: #f3e8ff;
+  background-color: var(--primary-color);
 }
