@@ -26,7 +26,8 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user = current_user
-    @recipe.preparation_time = calculate_minutes(params[:recipe][:preparation_time_hr], params[:recipe][:preparation_time_min])
+    @recipe.preparation_time = calculate_minutes(params[:recipe][:preparation_time_hr],
+                                                 params[:recipe][:preparation_time_min])
     @recipe.cooking_time = calculate_minutes(params[:recipe][:cooking_time_hr], params[:recipe][:cooking_time_min])
 
     if @recipe.save
@@ -38,8 +39,7 @@ class RecipesController < ApplicationController
     end
   end
 
-  def destroy
-  end
+  def destroy; end
 
   private
 
@@ -48,6 +48,6 @@ class RecipesController < ApplicationController
   end
 
   def calculate_minutes(hours, minutes)
-    hours.to_i * 60 + minutes.to_i
+    (hours.to_i * 60) + minutes.to_i
   end
 end

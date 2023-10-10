@@ -3,6 +3,5 @@ class PublicRecipesController < ApplicationController
     @recipes = Recipe.where(public: true)
   end
 
-  def splash
-  end
+  def splash; end
 end
