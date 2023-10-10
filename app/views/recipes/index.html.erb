@@ -1,7 +1,12 @@
 <%= render "shared/navbar" %>
 <h1 class="bg-primary text-2xl text-center font-extrabold">My Recipe</h1>
-<div class="flex flex-wrap gap-2 justify-center bg-primary p-6">
-  <% @recipes.includes(:user).each do |r| %>
-      <%= render "shared/recipe_card", recipe: r %>
+<div class="flex flex-col gap-2 items-center bg-primary p-6">
+  <% if @recipes.empty?%>
+    <h2 class="mb-5">You don't have any Recipe yet</h2>
+  <% else%>
+    <% @recipes.includes(:user).each do |r| %>
+        <%= render "shared/recipe_card", recipe: r %>
+    <% end %>
   <% end %>
+  <%= link_to "Add Recipe", new_recipe_path, class: 'px-6 rounded-2xl py-3 text-white bg-blue-500 hover:bg-blue-300 cursor-pointer transition-all'%>
 </div>
