@@ -1,4 +1,24 @@
 <%= render "shared/navbar" %>\
-<h1>RecipeFoods#new</h1>
-<p>Find me in app/views/recipe_foods/new.html.erb</p>
-<div class="text-3xl font-bold"> THIS IS FOR ADD NEW FOOD TO THE RECIPE </div>
+<section class="recipe-food-section flex justify-center items-center">
+    <div class="recipe-food-container">
+        <h2 class="text-2xl font-semibold">Add new ingredient to: </h2>
+        <h3 class="text-center"><%= @recipe.name %></h3>
+
+        <div class="recipe-food-form-container mt-5 border p-5">
+            <%= form_with model: [@recipe, @recipe_food] do |f|%>
+                <div class="form-field mb-5">
+                    <%= f.collection_select :food_id, Food.order(:name), :id, :name_with_measurement_unit ,{prompt: "Choose ingredients"}, {value: " "} %>
+                </div>
+
+                <div class="form-field mb-5">
+                        <%= f.number_field :quantity, placeholder: 'Quantity', required: true, step: '0.01'%>
+                </div>
+
+                <div class="form-field mb-5">
+                    <%= f.submit "ADD NEW INGREDIENT" , class: 'border bg-blue-500 px-3 py-1 text-white rounded-md'%>
+                </div>
+            <% end %>
+
+        </div>
+    </div>
+</section>
