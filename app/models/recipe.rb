@@ -27,4 +27,16 @@ class Recipe < ApplicationRecord
     minutes = cooking_time % 60
     minutes.to_i
   end
+
+  def total_time_hours
+    total = preparation_time + cooking_time
+    hours = total / 60
+    hours.to_i
+  end
+
+  def total_time_minutes
+    total = preparation_time + cooking_time
+    minutes = total % 60
+    minutes.to_i
+  end
 end
