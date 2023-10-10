@@ -53,10 +53,37 @@
 
     </div>
     <div>
-      <%= link_to "Add ingredient",  new_recipe_recipe_food_path(@recipe.id) %>
+      <%= link_to "Add ingredient",  new_recipe_recipe_food_path(@recipe.id), class: 'border bg-blue-500 px-3 py-1 text-white rounded-md' %>
     </div>
     <div>
-      Will be the food table
+       <table class="border">
+            <thead class="border">
+                <tr>
+                <th class=" p-5">Food</th>
+                <th class=" p-5">Quantity</th>
+                <th class=" p-5">Value</th>
+                <th class=" p-5">Action</th>
+                </tr>
+            </thead>
+  <tbody class="">
+    <!-- Add table rows with data here -->
+    
+    <tr class="">
+    <% @recipe.recipe_foods.each do |recipe_food|%>
+      <td class="p-5"><%= recipe_food.food.name %></td>
+      <td class="p-5"><%= recipe_food.quantity %></td>
+      <td class="p-5"><%= recipe_food.total_price %></td>
+      <td class="p-5">
+        <%= button_to 'Delete', recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id ), method: :delete, class: 'border px-3 py-1 text-white bg-red-500 my-5' %>
+      </td>
+      
+    </tr>
+    <% end %>
+    
+
+    <!-- Add more rows as needed -->
+  </tbody>
+</table>
     </div>
   </div>
 </section>
