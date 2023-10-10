@@ -8,13 +8,13 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
    <div class="field my-5 flex items-center border px-5 py-3 border-black ">
         <i class="fas fa-user me-4"></i>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'outline-none bg-inherit   ', placeholder: 'Username' %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'outline-none bg-inherit ', placeholder: 'Username' %>
         </div>
 
 
   <div class="field flex items-center  my-5 border px-5 py-3 border-black">
           <i class="fas fa-lock me-4"></i> 
-          <%= f.password_field :password, autocomplete: "new-password", class: 'outline-none bg-inherit   ', placeholder: 'Password' %>
+          <%= f.password_field :password, autocomplete: "new-password", class: 'outline-none bg-inherit ', placeholder: 'Password' %>
         </div>
 
 
