@@ -1,8 +1,15 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
+    @preparation_time_hours = @recipe.preparation_time_hours
+    @preparation_time_minutes = @recipe.preparation_time_minutes
+    @cooking_time_hours = @recipe.cooking_time_hours
+    @cooking_time_minutes = @recipe.cooking_time_minutes
   end
 
   def new
