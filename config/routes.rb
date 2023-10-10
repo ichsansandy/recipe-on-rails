@@ -15,9 +15,6 @@ Rails.application.routes.draw do
   
   resources :foods, only: %i[index new create destroy]
   resources :recipes, except: :edit do
-    member do
-      post 'toggle_public'
-    end
     resources :recipe_foods, only: %i[new create destroy]
   end 
 

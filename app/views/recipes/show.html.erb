@@ -3,10 +3,15 @@
 <section class="flex justify-center p-3 bg-primary">
   <div class="flex flex-col items-center w-full gap-5">
     <% if current_user == @recipe.user %>
-      <div class="mt-3 flex items-center">
-        <%= check_box_tag :public, 1, @recipe.public, { data: { remote: true, url: toggle_public_recipe_path(@recipe) }, class: "switch", id: "public-toggle" } %>
-        <%= label_tag :public, "Public" %>
-      </div>
+      <%= form_with model: @recipe, class: "public-form" do |form| %>
+        <div class="mt-3 flex items-center gap-2">
+          <label class="switch">
+            <%= form.check_box :public, { checked: @recipe.public }, onchange: 'this.form.submit();' %>
+            <span class="slider"></span>
+          </label>
+          <%= form.label :public, "Public" %>
+        </div>
+      <% end %>
     <% end %>
     <div class="relative flex flex-col items-center p-4 bg-white border-2 border-gray-100 sm:px-24 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-40">
       <%# image absolute %>
@@ -54,6 +59,7 @@
     </div>
     <div>
       Will be the button for generate shopping list and add food
+
     </div>
     <div>
       Will be the food table
