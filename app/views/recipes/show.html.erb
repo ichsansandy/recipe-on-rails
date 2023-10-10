@@ -52,8 +52,10 @@
       
 
     </div>
-    <div>
+    <div class=" flex ">
       <%= link_to "Add ingredient",  new_recipe_recipe_food_path(@recipe.id), class: 'border bg-blue-500 px-3 py-1 text-white rounded-md' %>
+      <%= link_to "Generate shopping List", shopping_lists_path, class: 'border bg-blue-500 px-3 py-1 text-white rounded-md' %>
+
     </div>
     <div>
        <table class="border">
