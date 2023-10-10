@@ -12,6 +12,12 @@ class RecipesController < ApplicationController
     @cooking_time_minutes = @recipe.cooking_time_minutes
   end
 
+  def toggle_public
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(public: !@recipe.public)
+    render json: { public: @recipe.public }
+  end
+
   def new
     @recipe = Recipe.new
   end
@@ -37,7 +43,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :public, :preparation_time_hr, :preparation_time_min, :cooking_time_hr, :cooking_time_min)
+    params.require(:recipe).permit(:name, :description, :public)
   end
 
   def calculate_minutes(hours, minutes)
