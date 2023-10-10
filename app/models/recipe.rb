@@ -7,7 +7,6 @@ class Recipe < ApplicationRecord
   validates :cooking_time, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :description, presence: true, allow_blank: false
   validates :public, inclusion: { in: [true, false] }
-
   def preparation_time_hours
     hours = preparation_time / 60
     hours.to_i

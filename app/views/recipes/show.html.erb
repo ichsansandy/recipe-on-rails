@@ -3,10 +3,15 @@
 <section class="flex justify-center p-3 bg-primary">
   <div class="flex flex-col items-center w-full gap-5">
     <% if current_user == @recipe.user %>
-      <div class="mt-3 flex items-center">
-        <%= check_box_tag :public, 1, @recipe.public, { data: { remote: true, url: toggle_public_recipe_path(@recipe) }, class: "switch", id: "public-toggle" } %>
-        <%= label_tag :public, "Public" %>
-      </div>
+      <%= form_with model: @recipe, method: :patch, class: "public-form", data: { url: toggle_public_recipe_path(@recipe), recipe_id: @recipe.id } do |form| %>
+        <div class="mt-3 flex items-center gap-2">
+          <label class="switch">
+            <input type="checkbox" <%= 'checked' if @recipe.public %> onchange="togglePublic(this)">
+            <span class="slider"></span>
+          </label>
+          <%= form.label :public, "Public" %>
+        </div>
+      <% end %>
     <% end %>
     <div class="relative flex flex-col items-center p-4 bg-white border-2 border-gray-100 sm:px-24 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-40">
       <%# image absolute %>
@@ -89,3 +94,32 @@
     </div>
   </div>
 </section>
+
+<script>
+  function togglePublic(checkbox) {
+    console.log("called");
+    var form = checkbox.closest("form");
+    var recipeId = form.dataset.recipeId;
+    var url = form.dataset.url;
+
+    var formData = new FormData();
+    formData.append("recipe_id", recipeId);
+
+    fetch(url, {
+      method: "PATCH",
+      body: formData,
+      headers: {
+        "X-CSRF-Token": document.querySelector("meta[name=csrf-token]").content
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from the server if needed
+        console.log(data);
+      })
+      .catch(error => {
+        // Handle errors if any
+        console.error(error);
+      });
+  }
+</script>
