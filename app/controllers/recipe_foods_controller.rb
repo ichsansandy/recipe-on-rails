@@ -10,7 +10,7 @@ class RecipeFoodsController < ApplicationController
 
     if @recipe_food.save
       redirect_to recipe_path(@recipe), notice: 'Add new ingredient'
-    else 
+    else
       redirect_to new_recipe_recipe_food_path(@recipe.id)
     end
   end
@@ -21,10 +21,10 @@ class RecipeFoodsController < ApplicationController
     @recipe_food.destroy!
 
     redirect_to recipe_path(@recipe.id), notice: 'Ingredient successfully deleted'
-    
   end
 
   private
+
   def recipe_foods_params
     params.require(:recipe_food).permit(:food_id, :quantity)
   end

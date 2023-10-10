@@ -39,6 +39,4 @@ class Recipe < ApplicationRecord
     minutes = total % 60
     minutes.to_i
   end
-
-
 end
