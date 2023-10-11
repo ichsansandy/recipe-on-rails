@@ -1,6 +1,6 @@
 <section class="sign-up-section">
   <%= render "shared/sign_up_background" %>
-  <div class="sign-up-container border border-2 p-10">
+  <div class="sign-up-container border border-2 p-10 bg-form">
     
     <%# <figure class="flex items-center  justify-center">
       <img src="https://images.unsplash.com/photo-1496262967815-132206202600?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1846&q=80" class="w-[200px] blur-sm" alt="sign-up-image">
@@ -9,15 +9,11 @@
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
-
+        <h1 class="text-center text-3xl font-bold capitalize">Create your account</h1>
 
         <div class="field flex items-center  my-5 border-b px-5 py-3 border-b-blue-500">
           <i class="fas fa-user me-4"></i>
-<<<<<<< HEAD
-          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'outline-none bg-inherit', placeholder: 'Username' %>
-=======
           <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'outline-none bg-inherit ', placeholder: 'Username' %>
->>>>>>> 58e78e00691f499740e4a227e19b9f498ed3ac81
         </div>
 
 
@@ -36,12 +32,12 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'outline-none bg-inherit ', placeholder: 'Confirm Password' %>
         </div>
 
-        <div class="actions w-full text-center sign-up-btn rounded-md">
-          <%= f.submit "Sign up", class: ' px-5 py-3  uppercase text-white' %>
+        <div class="actions w-full text-center bg-dark-primary rounded-md hover:scale-105 transition-all cursor-pointer ">
+          <%= f.submit "Sign up", class: ' px-5 py-3  uppercase text-white cursor-pointer' %>
         </div>
       <% end %>
 
-        <%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
 
   </div>
 </section>

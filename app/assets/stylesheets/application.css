@@ -54,11 +54,14 @@
 
 .sign-up-background {
   width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
   height: 100vh;
-  filter: blur(10px);
+  filter: blur(9px);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-position: center;
+  overflow: hidden;
+  /* position: relative; */
 }
 
 .sign-up-container {
@@ -73,10 +76,6 @@
 .sign-up-container ::placeholder {
   color: var(--text-color);
   font-weight: 500;
-}
-
-.sign-up-btn {
-  background-color: var(--bold-orange-color);
 }
 
 .switch {
@@ -149,6 +148,10 @@ input:checked + .slider::before {
 
 .bg-accent {
   background-color: var(--light-white-color);
+}
+
+.bg-form {
+  background-color: rgba(255, 245, 214, 0.8)
 }
 
 .text-primary {
