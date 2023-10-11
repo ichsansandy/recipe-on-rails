@@ -23,8 +23,8 @@
                         <% @recipe_foods.each do |recipe_food| %>
                             <tr>
                                 <th><%= recipe_food.food.name%></th>
-                                <th><%= recipe_food.quantity%></th>
-                                <th><%= recipe_food.total_price%></th>
+                                <th><%= recipe_food.quantity_needed%></th>
+                                <th><%= recipe_food.total_price_need%></th>
                             </tr>
                         <% end %>
                     </tbody>

@@ -7,4 +7,13 @@ class RecipeFood < ApplicationRecord
   def total_price
     food.price * quantity
   end
+
+  def quantity_needed
+    quantity - food.quantity
+  end
+
+  def total_price_need
+    food.price * quantity_needed
+  end
 end
+
