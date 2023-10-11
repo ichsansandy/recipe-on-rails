@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     resources :recipe_foods, only: %i[new create destroy]
   end 
 
-  resources :shopping_lists, only: %i[index]
+  resources :shopping_lists, only: [:index] do
+    get :generate, on: :collection
+  end
 end
