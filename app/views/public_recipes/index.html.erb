@@ -1,6 +1,6 @@
 <%= render "shared/navbar" %>
-<h1 class="bg-primary text-2xl text-center font-extrabold">Recipe on Rails</h1>
-<div class="flex flex-wrap gap-2 justify-center bg-primary p-6">
+<h1 class=" text-2xl text-center font-extrabold">Recipe on Rails</h1>
+<div class="flex flex-wrap gap-2 justify-center  p-6">
   <% @recipes.includes(:user).each do |r| %>
       <%= render "shared/recipe_card", recipe: r %>
   <% end %>
