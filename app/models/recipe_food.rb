@@ -16,4 +16,3 @@ class RecipeFood < ApplicationRecord
     food.price * quantity_needed
   end
 end
-
