@@ -7,31 +7,22 @@
 /* Recipes  */
 :root {
   --primary-color: #ff8400;
-  --white-color: #fffaeb;
+  --white-color: #fffafb;
   --text-color: #130e01;
   --light-white-color: #fff5d6;
   --bold-orange-color: #cf4307;
 }
 
 /* splash style  */
-.splash-section {
-  background-color: var(--white-color);
-}
 
 .header-container {
   position: relative;
   z-index: 1;
-  transform: translateY(10%);
-}
-
-.logo-icon {
-  /* background-color: var(--bold-orange-color); */
-  color: var(--bold-orange-color);
+  /* transform: translateY(10%); */
 }
 
 .header-container h1 {
   font-family: 'Playfair Display', serif;
-  font-style: italic;
 }
 
 .login-register-container {
@@ -42,7 +33,6 @@
   background-size: cover;
   background-color: #eae8e6;
   background-blend-mode: multiply;
-  position: relative;
   margin: 0 auto;
   border-radius: 16px;
   transform: translateY(-30%);
@@ -148,3 +138,41 @@ input:checked + .slider::before {
 .bg-primary {
   background-color: var(--primary-color);
 }
+
+.bg-background {
+  background-color: var(--white-color);
+}
+
+.bg-dark-primary {
+  background-color: var(--bold-orange-color);
+}
+
+.bg-accent {
+  background-color: var(--light-white-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-background {
+  color: var(--white-color);
+}
+
+.text-dark-primary {
+  color: var(--bold-orange-color);
+}
+
+.text-accent {
+  color: var(--light-white-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-dark-primary {
+  border-color: var(--bold-orange-color);
+}
+
+
