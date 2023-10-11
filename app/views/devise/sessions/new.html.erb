@@ -1,11 +1,11 @@
 
 <%= render "shared/sign_up_background" %>
 <div class="sign-up-container border border-2 p-10 bg-form ">
-   <figure class="flex items-center  justify-center w-[300px] rounded-md overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="w-full" alt="sign-up-image">
-    </figure> 
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <h1 class="text-center text-3xl font-bold capitalize">Login</h1>
+   
+   
    <div class="field my-5 flex items-center border px-5 py-3 border-black ">
         <i class="fas fa-user me-4"></i>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'outline-none bg-inherit ', placeholder: 'Username' %>
