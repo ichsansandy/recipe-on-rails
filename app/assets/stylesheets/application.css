@@ -18,6 +18,7 @@
 .header-container {
   position: relative;
   z-index: 1;
+
   /* transform: translateY(10%); */
 }
 
@@ -61,6 +62,7 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+
   /* position: relative; */
 }
 
@@ -151,7 +153,7 @@ input:checked + .slider::before {
 }
 
 .bg-form {
-  background-color: rgba(255, 245, 214, 0.8)
+  background-color: rgba(255, 245, 214, 0.8);
 }
 
 .text-primary {
@@ -177,5 +179,3 @@ input:checked + .slider::before {
 .border-dark-primary {
   border-color: var(--bold-orange-color);
 }
-
-
