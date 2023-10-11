@@ -15,18 +15,6 @@ class ShoppingListsController < ApplicationController
         @needed_money += @food.price * (@food.quantity - recipe_food.quantity)
       end
     end
-    # @total_value = @recipe_foods.sum(&:total_price_need)
-
-    # @foods = current_user.foods
-    # @items_to_buy = 0
-    # @needed_money = 0
-
-    # @foods.each do |food|
-    #   if food.to_buy.positive?
-    #     @items_to_buy += food.to_buy
-    #     @needed_money += food.to_buy * food.price
-    #   end
-    # end
   end
 
   def generate

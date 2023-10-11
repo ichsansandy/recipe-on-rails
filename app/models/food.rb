@@ -10,14 +10,4 @@ class Food < ApplicationRecord
   def name_with_measurement_unit
     "#{name} (#{measurement_unit})"
   end
-
-  def to_buy
-    recipe_foods.reduce(-quantity) do |sum, recipe_food|
-      sum + recipe_food.quantity
-    end
-
-    # if food.quantity > food.recipe_foods.quantity
-    #   sum = food.quantity - recipe_foods.quantity
-    # end
-  end
 end
