@@ -1,0 +1,41 @@
+
+<%= render "shared/sign_up_background" %>
+<div class="sign-up-container border border-2 p-10 bg-form ">
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+   <h1 class="text-center text-3xl font-bold capitalize">Login</h1>
+   
+   
+   <div class="field my-5 flex items-center border px-5 py-3 border-black ">
+        <i class="fas fa-user me-4"></i>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'outline-none bg-inherit ', placeholder: 'Username' %>
+        </div>
+
+
+  <div class="field flex items-center  my-5 border px-5 py-3 border-black">
+          <i class="fas fa-lock me-4"></i> 
+          <%= f.password_field :password, autocomplete: "new-password", class: 'outline-none bg-inherit ', placeholder: 'Password' %>
+        </div>
+
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, class:'font-semibold' %>
+    </div>
+  <% end %>
+
+
+
+  <div class="actions  text-center bg-dark-primary hover:scale-105 transition-all cursor-pointer rounded-md my-5">
+    <%= f.submit "Log in", class: 'px-5 py-3  uppercase text-white' %>
+  </div>
+
+        <%= render "devise/shared/links" %>
+
+
+
+<% end %>
+
+</div>
+

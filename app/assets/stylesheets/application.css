@@ -1,0 +1,181 @@
+/* Default */
+
+/* Devise */
+
+/* Food */
+
+/* Recipes  */
+:root {
+  --primary-color: #ff8400;
+  --white-color: #fffafb;
+  --text-color: #130e01;
+  --light-white-color: #fff5d6;
+  --bold-orange-color: #cf4307;
+}
+
+/* splash style  */
+
+.header-container {
+  position: relative;
+  z-index: 1;
+
+  /* transform: translateY(10%); */
+}
+
+.header-container h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+.login-register-container {
+  width: 80%;
+  background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  background-color: #eae8e6;
+  background-blend-mode: multiply;
+  margin: 0 auto;
+  border-radius: 16px;
+  transform: translateY(-30%);
+}
+
+.btn {
+  background-color: var(--bold-orange-color);
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ff5733;
+}
+
+/* splash style end  */
+
+/* sign up section start */
+
+.sign-up-background {
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+  height: 100vh;
+  filter: blur(9px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  /* position: relative; */
+}
+
+.sign-up-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.sign-up-container ::placeholder {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider::before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+
+/* Utility  */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-background {
+  background-color: var(--white-color);
+}
+
+.bg-dark-primary {
+  background-color: var(--bold-orange-color);
+}
+
+.bg-accent {
+  background-color: var(--light-white-color);
+}
+
+.bg-form {
+  background-color: rgba(255, 245, 214, 0.8);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-background {
+  color: var(--white-color);
+}
+
+.text-dark-primary {
+  color: var(--bold-orange-color);
+}
+
+.text-accent {
+  color: var(--light-white-color);
+}
+
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-dark-primary {
+  border-color: var(--bold-orange-color);
+}

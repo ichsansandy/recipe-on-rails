@@ -1,0 +1,35 @@
+<section class="bg-background min-h-screen flex justify-center items-center">
+    <div class="header-container mx-auto w-[80%] flex  items-center flex-col justify-evenly">
+        <%# <div class="border-black border-2 rounded-full w-1/6  aspect-square ">
+            <i  class=" fas fa-utensils text-6xl logo-icon rounded-[30px] p-5"></i>
+        </div> %>
+        <div class="font-medium">
+            <h1 class=" text-[10vw] leading-[1] flex items-center justify-between w-full">
+            <span class="">
+                Find 
+            </span>
+            <span class=" font-extrabold">
+            Recipe
+            </span>
+            <i  class="bg-accent aspect-square fas fa-utensils text-dark-primary text-[4vw] rounded-full p-7 border-[16px] border-dark-primary mx-3"></i>
+            </h1>
+            <h1 class=" text-[10vw] leading-[1] ">Faster
+            <span class=" font-extrabold">
+             on Rails
+            </span>
+             </h1>
+        </div>
+        <div class="relative flex justify-center gap-4 text-2xl mt-6 w-full">
+            <%= link_to "Getting Started", new_user_registration_path, class: ' rounded-[50px] px-10 py-5 text-center w-1/4 bg-dark-primary border-box border-8 border-dark-primary text-white font-medium hover:scale-105 hover:font-extrabold transition-all' %>
+            <%= link_to "Sign In Now", new_user_session_path, class: ' rounded-[50px] px-10 py-5 text-center w-1/4 bg-transparent border-box border-8 border-primary text-primary font-medium hover:scale-105 hover:font-extrabold transition-all' %>
+            <div class="absolute -z-10 w-full h-[30vh] -top-4 bg-[url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80')]  login-register-container">
+            </div>
+        </div>
+    </div>
+    <%# <div class="login-register-container h-[40vh] flex items-end justify-center">
+        <div class="login-register-buttons flex py-5 rounded-lg overflow-hidden">
+             <%= link_to "Log In", new_user_session_path, class: 'border rounded-md btn px-5 py-1 me-4' %>
+            <%# <%= link_to "Sign Up", new_user_registration_path, class: 'border rounded-md btn px-5 py-1 me-4' %>
+        <%# </div>
+    </div> %>
+</section>
